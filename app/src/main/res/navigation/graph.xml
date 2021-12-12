@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/frgme_home">
+
+    <fragment
+        android:id="@+id/frgme_home"
+        android:name="com.example.myapplication.frgme_home"
+        android:label="fragment_frgme_home"
+        tools:layout="@layout/fragment_frgme_home" >
+        <action
+            android:id="@+id/action_frgme_home_to_frgme_welome"
+            app:destination="@id/frgme_welome" />
+    </fragment>
+    <fragment
+        android:id="@+id/frgme_welome"
+        android:name="com.example.myapplication.frgme_welome"
+        android:label="fragment_frgme_welome"
+        tools:layout="@layout/fragment_frgme_welome" />
+</navigation>
