@@ -6,124 +6,256 @@
     android:layout_height="match_parent"
     tools:context=".frgme_home">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/edt_recpass"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/edt_pass"
-            android:layout_width="277dp"
-            android:layout_height="45dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="پسورد را وارد کنید"
-            android:inputType="number|textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.41"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_email"
-            app:layout_constraintVertical_bias="0.022" />
-
-        <EditText
-            android:id="@+id/edt_ecpass"
-            android:layout_width="283dp"
-            android:layout_height="51dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="تکرار پسورد را وارد کنید"
-            android:inputType="textPersonName|textPassword"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.437"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_pass"
-            app:layout_constraintVertical_bias="0.023" />
-
-        <EditText
-            android:id="@+id/edt_phone"
-            android:layout_width="276dp"
-            android:layout_height="44dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="شماره تلفن را وارد کنین"
-            android:inputType="number|textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.414"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_ecpass"
-            app:layout_constraintVertical_bias="0.044" />
-
-        <EditText
-            android:id="@+id/edt_address"
-            android:layout_width="281dp"
-            android:layout_height="81dp"
-            android:ems="10"
-            android:hint="آدرس"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_codeposti"
-            app:layout_constraintVertical_bias="0.06" />
-
-        <EditText
-            android:id="@+id/edt_codeposti"
-            android:layout_width="284dp"
-            android:layout_height="42dp"
-            android:ems="10"
-            android:gravity="center"
-            android:hint="کد پستی"
-            android:inputType="number|textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.472"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_phone"
-            app:layout_constraintVertical_bias="0.057" />
-
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="236dp"
-            android:layout_height="72dp"
-            android:text="ثبت اطلاعات"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.548"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_address"
-            app:layout_constraintVertical_bias="0.704" />
-
-        <CheckBox
-            android:id="@+id/chbox"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="تایید قوانین"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.828"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_address"
-            app:layout_constraintVertical_bias="0.26" />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edt_email"
-            android:layout_width="282dp"
-            android:layout_height="52dp"
-            android:ems="10"
-            android:hint="ایمیل را وارد کنید"
-            android:inputType="textPersonName"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.462"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="718dp">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <Spinner
+                    android:id="@+id/sp_month"
+                    android:layout_width="86dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/sp_day"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+                <Spinner
+                    android:id="@+id/sp_year"
+                    android:layout_width="100dp"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/sp_month"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+                <EditText
+                    android:id="@+id/edt_pass"
+                    android:layout_width="282dp"
+                    android:layout_height="44dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="گذرواژه"
+                    android:inputType="textPersonName|textPassword"
+                    android:password="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.457"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/edt_recpass"
+                    android:layout_width="283dp"
+                    android:layout_height="51dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="تکرار گذرواژه"
+                    android:inputType="textPersonName|textPassword"
+                    android:password="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.453"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pass" />
+
+                <EditText
+                    android:id="@+id/edt_phone"
+                    android:layout_width="276dp"
+                    android:layout_height="44dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="شماره تلفن "
+                    android:inputType="number|textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.481"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_family"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="281dp"
+                    android:layout_height="81dp"
+                    android:ems="10"
+                    android:hint="آدرس"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sp_month"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/edt_codeposti"
+                    android:layout_width="284dp"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="124dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="کد پستی"
+                    android:inputType="number|textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.519"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_address"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="236dp"
+                    android:layout_height="72dp"
+                    android:text="ثبت اطلاعات"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chbox_2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <CheckBox
+                    android:id="@+id/chbox_2"
+                    android:layout_width="358dp"
+                    android:layout_height="45dp"
+                    android:text="I agree to the Terms ande Condittions"
+                    android:textSize="19sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.698"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/chbox_1"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <CheckBox
+                    android:id="@+id/chbox_1"
+                    android:layout_width="358dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="136dp"
+                    android:text="send me latest news and update"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.698"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                    app:layout_constraintVertical_bias="0.102" />
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="282dp"
+                    android:layout_height="52dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="ایمیل"
+                    android:inputType="textPersonName"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.465"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/edt_name"
+                    android:layout_width="283dp"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="نام "
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.492"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_recpass" />
+
+                <EditText
+                    android:id="@+id/edt_family"
+                    android:layout_width="278dp"
+                    android:layout_height="54dp"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:hint="نام خانوادگی"
+                    android:inputType="textPersonName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="تاریخ تولد"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="جنسیت"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.955"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_codeposti" />
+
+                <Spinner
+                    android:id="@+id/sp_day"
+                    android:layout_width="88dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintHorizontal_bias="0.995"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+                <RadioGroup
+                    android:id="@+id/ac_main_rgb"
+                    android:layout_width="194dp"
+                    android:layout_height="76dp"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.71">
+
+                    <RadioButton
+                        android:id="@+id/radioButton10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="مرد"
+                        android:textSize="12sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="زن"
+                        android:textSize="12sp" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

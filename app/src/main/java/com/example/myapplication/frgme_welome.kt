@@ -21,11 +21,18 @@ class frgme_welome : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
     private var email:String=""
     private var pass:String=""
     private var phone:String=""
     private var address:String=""
     private var codeposti:String=""
+    private var name:String=""
+    private var family:String=""
+    private var rb:String=""
+    private var sp_2:String=""
+    private var sp_4:String=""
+    private var sp_6:String=""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +46,12 @@ class frgme_welome : Fragment() {
         phone = requireArguments().getString("phone").toString()
         address = requireArguments().getString("address").toString()
         codeposti = requireArguments().getString("codeposti").toString()
+        name = requireArguments().getString("name").toString()
+        family = requireArguments().getString("family").toString()
+        rb = requireArguments().getString("rb").toString()
+        sp_2 = requireArguments().getString("sp_2").toString()
+        sp_4 = requireArguments().getString("sp_4").toString()
+        sp_6 = requireArguments().getString("sp_6").toString()
     }
 
     override fun onCreateView(
@@ -51,17 +64,39 @@ class frgme_welome : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val tv_email=view.findViewById<TextView>(R.id.tv_email)
         tv_email.text=email
 
         val tv_pass=view.findViewById<TextView>(R.id.tv_pass)
         tv_pass.text=pass
+
         val tv_phone=view.findViewById<TextView>(R.id.tv_phone)
         tv_phone.text=phone
-        val tv_address=view.findViewById<TextView>(R.id.tv_address)
+
+        val tv_address=view.findViewById<TextView>(R.id.tv_codeposti)
         tv_address.text=address
-        val tv_posti=view.findViewById<TextView>(R.id.tv_odeposti)
-        tv_posti.text=codeposti
+
+        val tv_codeposti=view.findViewById<TextView>(R.id.tv_address)
+        tv_codeposti.text=codeposti
+
+        val tv_name=view.findViewById<TextView>(R.id.tv_name)
+        tv_name.text=name
+
+        val tv_family=view.findViewById<TextView>(R.id.tv_family)
+        tv_family.text=family
+
+        val tv_rgb=view.findViewById<TextView>(R.id.tv_rgb)
+        tv_rgb.text=rb
+
+        val tv_sp_2=view.findViewById<TextView>(R.id.tv_day)
+        tv_sp_2.text=sp_2
+
+        val tv_sp_4=view.findViewById<TextView>(R.id.tv_month)
+        tv_sp_4.text=sp_4
+
+        val tv_sp_6=view.findViewById<TextView>(R.id.tv_year)
+        tv_sp_6.text=sp_6
     }
 
 
